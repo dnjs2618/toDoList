@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="styles.css";
+  </head>
+  <body>
+    <div class="todo">
+      <div class="todo__column">
+        <form class="js-form">
+          <input type="text" placeholder="Whats your ToDo List?" />
+        </form>
+      </div>
+      <div class="todo__column">
+        <div class="todo__column-left">
+          <div class="todo__title">To Do List</div>
+          <ul class="todo__list"></ul>
+          <div class="todo__delete">일괄삭제</div>
+        </div>
+        <div class="todo__column-right">
+          <div class="todo__done-title">Done list</div>
+          <ul class="todo__done"></ul>
+          <div class="todo__done-delete">일괄삭제</div>
+        </div>
+      </div>
+    </div>
+    <script src="todo.js"></script>
+  </body>
+</html>

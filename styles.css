@@ -1,0 +1,141 @@
+@import "reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,500&display=swap");
+
+* {
+  font-family: "Jost", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+.todo {
+  width: 80%;
+  border: 1px solid gray;
+  height: 500px;
+  margin-top: 50px;
+}
+.todo__column:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.todo__column .js-form {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.todo__column input {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  border: 2px solid black;
+  margin-top: 10px;
+  transition: all 0.3s ease-in;
+  font-size: 22px;
+}
+
+.todo__column input:focus {
+  transform: translateY(-10px);
+  animation: inputShadow 1.4s infinite linear forwards;
+  outline: none;
+}
+
+@keyframes inputShadow {
+  0% {
+    box-shadow: 0 0 5px black;
+  }
+  50% {
+    box-shadow: 0px 0px 10px black;
+  }
+  100% {
+    box-shadow: 0 0 5px black;
+  }
+}
+
+.todo__column:nth-child(2) {
+  display: flex;
+  margin-top: 10px;
+  height: 85%;
+}
+
+.todo__column-left {
+  width: 50%;
+  height: 100%;
+  border-right: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+}
+
+.todo__column-right {
+  width: 50%;
+  height: 100%;
+  border-top: 1px solid lightgray;
+}
+
+.todo__column-left .todo__title,
+.todo__column-right .todo__done-title {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 0;
+  border-bottom: 1px solid lightgray;
+}
+
+.todo__column ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo__done,
+.todo__list {
+  height: 350px;
+  overflow-y: scroll;
+}
+
+.todo__list li {
+  margin: 5px 0;
+  padding: 5px;
+  border-bottom: 1px solid lightgray;
+}
+
+.todo__list li span {
+  font-family: "Jost", sans-serif;
+  font-weight: 600;
+}
+
+.todo__list li button {
+  border: 1px solid lightgray;
+  background-color: #fff;
+  float: right;
+  margin-right: 5px;
+  color: red;
+  border-radius: 20px;
+}
+
+.todo__done li {
+  margin: 5px 0;
+  padding: 5px;
+  border-bottom: 1px solid lightgray;
+  text-decoration: line-through;
+  color: gray;
+}
+
+.todo__done-delete,
+.todo__delete {
+  width: 90%;
+  margin: 0 auto;
+  padding: 8px 0;
+  text-align: center;
+  font-weight: 700;
+  border: 1px solid lightgray;
+  color: #e74c3c;
+  box-shadow: 0 0 8px black;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.todo__done-delete:hover,
+.todo__delete:hover {
+  transform: translateY(-3px);
+}
